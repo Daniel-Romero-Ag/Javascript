@@ -12,23 +12,41 @@
     <h1>Fundamentos Js</h1>
 </body>
 <SCRipt>
-    console.log("LA DIFERENCIA ENTRE VAR Y LET ES QUE VAR NO RESPETA EL AMBITO DE BLOQUE Y TODAS LAS VARIABLES FUERA DE FUNCIONES SON GLOBALES");
-    console.log("***********VAR***********");
-    var nombre = "Daniel";
-    console.log("Antes del bloque:", nombre);
-    if (true) {
-        var nombre = "Pedro";
-        console.log("Dentro del bloque:", nombre);
+    // console.log("LA DIFERENCIA ENTRE VAR Y LET ES QUE VAR NO RESPETA EL AMBITO DE BLOQUE Y TODAS LAS VARIABLES FUERA DE FUNCIONES SON GLOBALES");
+    // console.log("***********VAR***********");
+    // var nombre = "Daniel";
+    // console.log("Antes del bloque:", nombre);
+    // if (true) {
+    //     var nombre = "Pedro";
+    //     console.log("Dentro del bloque:", nombre);
+    // }
+    // console.log("Despues del bloque:", nombre);
+    // console.log("***********LET***********");
+    // let nombre2 = "Daniel";
+    // console.log("Antes del bloque:", nombre2);
+    // if (true) {
+    //     let nombre2 = "Pedro";
+    //     console.log("Dentro del bloque:", nombre2);
+    // }
+    // console.log("Despues del bloque:", nombre2);
+    const PI = 3.1416;
+    console.log(PI);
+
+    // PI = 2; NO PODEMOS CAMBIAR EL VALOR DE UN CONST
+    const COPITO = {
+        nombre: "Copito",
+        edad: 22,
+        apellido: "Romero"
     }
-    console.log("Despues del bloque:", nombre);
-    console.log("***********LET***********");
-    let nombre2 = "Daniel";
-    console.log("Antes del bloque:", nombre2);
-    if (true) {
-        let nombre2 = "Pedro";
-        console.log("Dentro del bloque:", nombre2);
-    }
-    console.log("Despues del bloque:", nombre2);
+    const COLORES = ["blanco", "negro"]
+    console.log(COLORES);
+    COLORES.push("azul");
+    console.log(COLORES);
+    COLORES.pop();
+    console.log(COLORES);
+    console.log(COPITO);
+    COPITO.nombre = "Chico"; //SI PODEMOS CAMBIAR EL VALOR SI ES EN UN OBJETO
+    console.log(COPITO);
 </SCRipt>
 
 </html>
