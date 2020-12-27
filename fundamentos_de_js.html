@@ -12,8 +12,23 @@
     <h1>Fundamentos Js</h1>
 </body>
 <SCRipt>
-    var hola = "Hola mundo"
-    console.log(hola);
+    console.log("LA DIFERENCIA ENTRE VAR Y LET ES QUE VAR NO RESPETA EL AMBITO DE BLOQUE Y TODAS LAS VARIABLES FUERA DE FUNCIONES SON GLOBALES");
+    console.log("***********VAR***********");
+    var nombre = "Daniel";
+    console.log("Antes del bloque:", nombre);
+    if (true) {
+        var nombre = "Pedro";
+        console.log("Dentro del bloque:", nombre);
+    }
+    console.log("Despues del bloque:", nombre);
+    console.log("***********LET***********");
+    let nombre2 = "Daniel";
+    console.log("Antes del bloque:", nombre2);
+    if (true) {
+        let nombre2 = "Pedro";
+        console.log("Dentro del bloque:", nombre2);
+    }
+    console.log("Despues del bloque:", nombre2);
 </SCRipt>
 
 </html>
