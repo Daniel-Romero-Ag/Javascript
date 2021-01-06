@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const colores = ["Rojo", "Azul", "Verde"]
+    colores.forEach(function(valor, llave) {
+        console.log(valor, llave)
+    })
+    const persona = {
+        "nombre": "Daniel",
+        "apellido": "Romero",
+        "edad": 22
+    }
+    console.log("-------------------")
+        //Usamos for in en objetos
+    for (const valor in persona) {
+        console.log(valor)
+    }
+    console.log("-------------------")
+        //Usamos for of en objetos ITERABLES
+    const animales = ["Perro", "Gato", "Conejo"]
+    for (const animal of animales) {
+        console.log(animal)
+    }
+</script>
+
+</html>
