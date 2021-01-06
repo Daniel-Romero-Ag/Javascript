@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    try {
+        console.log(numero * numero)
+    } catch (error) {
+        console.log("El error fue", error)
+    }
+
+    try {
+        let numero = "s"
+        if (isNaN(numero)) {
+            throw new Error("el valor no es un numero")
+        }
+        console.log(numero * numero)
+
+    } catch (error) {
+        console.log("El error fue", error)
+    }
+</script>
+
+</html>
