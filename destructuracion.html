@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //Para obtener el valor de los elementos de un array
+    //se debe poner entre corchetes
+    const colores = ["Rojo", "Azul", "Verde"]
+    let [a, c] = colores
+    console.log(a, c)
+    const perrito = {
+        "Nombre": "Perri",
+        "Apellido": "Romero",
+        "Edad": 8
+    }
+
+    //Debe tener el mismo nombre
+    let {
+        Nombre,
+        Apellido
+    } = perrito
+    console.log(Nombre, "  ", Apellido)
+</script>
+
+</html>
