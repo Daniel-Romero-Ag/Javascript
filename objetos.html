@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const b = {}
+        // b["nombre"] = "Daniel";
+        // console.log(b)
+        // const a = []
+        // a["nombre"] = "juan"
+        // const c = new Object({
+        //     "nombre": "Daniel",
+        //     "apellido": "Romero"
+        // })
+        // console.log(c);
+        // const d = ["12", 123, true, function saludar(persona) {
+        //     console.log("hola", persona)
+        //     return "hola"
+        // }]
+        // console.log(d)
+        // d[3]("Daniel");
+
+        const Daniel = {
+                "nombre": "Daniel",
+                "apellido": "Romero",
+                "telefono": 99193123,
+                "edad": 22,
+                "Lenguajes": ["HTML", "CSS", "Javascript"],
+                "Contacto": {
+                    "facebook": "danielRomero",
+                    "correo": "danielromero@hotmail.com"
+                },
+                "saludar": function() {
+                    console.log("hola")
+                }
+            }
+            //console.log(Daniel)
+
+        for (const propiedad in Daniel) {
+            //  console.log(propiedad, ":", Daniel[propiedad])
+        }
+        console.log(Daniel.hasOwnProperty("Contacto"))
+    </script>
+</body>
+
+</html>
