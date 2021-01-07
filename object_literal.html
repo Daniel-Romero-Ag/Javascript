@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let nombre = "Daniel",
+        edad = 22;
+    const amigo = {
+        nombre: nombre,
+        edad: edad,
+        saludo: function() {
+            console.log("Hola, me llamo Daniel")
+        }
+    }
+    console.log(amigo)
+    amigo.saludo()
+
+    const amigoLiteral = {
+        nombre,
+        edad,
+        saludo() {
+            console.log("Hola, me llamo Daniel, desde una funcion")
+        }
+    }
+    console.log(amigoLiteral)
+    amigoLiteral.saludo()
+
+    function suma(a, b) {
+        return a + b
+    }
+    const funcion = {
+        suma
+    }
+    console.log(funcion.suma(2, 34))
+</script>
+
+</html>
