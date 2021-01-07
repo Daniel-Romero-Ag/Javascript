@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Universidad(nombre, descripcion, lema = "No tiene lema") {
+        this.nombre = nombre
+        this.descripcion = descripcion
+        this.lema = lema
+    }
+    Universidad.prototype.decirLema = function() {
+        console.log(this.lema)
+    }
+
+    const UNAM = new Universidad("UNAM", "Universidad Nacional Autonoma de Mexico", "Por mi raza hablara el espiritu")
+    UNAM.decirLema()
+
+    function Carrera(nombre, descripcion, lema = "No tiene lema", area, duracion) {
+        this.area = area
+        this.duracion = duracion
+        this.super = Universidad
+        this.super(nombre, descripcion, lema)
+    }
+    Carrera.prototype = new Universidad()
+    Carrera.prototype.constructor = Carrera
+
+    const ingSistemas = new Carrera("Ing. Sistemas Computacionales", "En esta carrera aprenderas sobre...", "no tenemos lema", "Ingenieria", 5)
+    console.log(ingSistemas)
+</script>
+
+</html>
