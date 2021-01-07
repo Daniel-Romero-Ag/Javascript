@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // const daniel = {
+    //     nombre: "Daniel",
+    //     apellido: "Romero",
+    //     edad: 22,
+    //     carrera: "Ing Sistemas",
+    //     Semestre: "Sexto",
+    //     Promedio: 9.2,
+    //     saludo() {
+    //         return `Hola, me llamo ${this.nombre}`
+    //     }
+    // }
+    // const elias = {
+    //     nombre: "elias",
+    //     apellido: "rojas",
+    //     edad: 23,
+    //     carrera: "Ing Sistemas",
+    //     Semestre: "Sexto",
+    //     Promedio: 8.2,
+    //     saludo() {
+    //         return `Hola, me llamo ${this.nombre}`
+    //     }
+    // }
+    // const rommel = {
+    //     nombre: "Rommel",
+    //     apellido: "Gomez",
+    //     edad: 22,
+    //     carrera: "Ing Sistemas",
+    //     Semestre: "Sexto",
+    //     Promedio: 8.7,
+    //     saludo() {
+    //         return `Hola, me llamo ${this.nombre}`
+    //     }
+    // }
+    // console.log(daniel)
+    // console.log(daniel.saludo())
+    // console.log(elias)
+    // console.log(elias.saludo())
+    // console.log(rommel)
+    // console.log(rommel.saludo())
+
+    function Estudiante(nombre, apellido) {
+        this.nombre = nombre
+        this.apellido = apellido
+
+    }
+
+
+
+    Estudiante.prototype.saludar = function() {
+        return `Hola, me llamo ${this.nombre}`
+    }
+    const daniel = new Estudiante("Daniel", "Romero")
+
+    // console.log(daniel)
+    // console.log(daniel.saludar())
+    function SuperHeroe(nombre, apellido, alias) {
+        this.nombre = nombre
+        this.apellido = apellido
+        this.alias = alias
+        this.salvarMundo = function() {
+            return `${this.alias} salvó al mundo`
+        }
+    }
+    const spiderman = new SuperHeroe("Peter", "Parker", "Spider Man")
+    console.log(spiderman)
+    console.log(spiderman.salvarMundo())
+    SuperHeroe.prototype.traicionar = function() {
+        return `${this.alias} traicionó al mundo`
+    }
+    console.log(spiderman.traicionar())
+</script>
+
+</html>
