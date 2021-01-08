@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class Alumno {
+        constructor(nombre, carrera) {
+            this.nombre = nombre
+            this.carrera = carrera
+        }
+        descripcion() {
+            console.log(`Hola, me llamo ${this.nombre} y mi carrera es ${this.carrera}`)
+        }
+    }
+
+    const daniel = new Alumno("Daniel Romero", "Ing. sistemas")
+    daniel.descripcion()
+    class Graduado extends Alumno {
+        constructor(nombre, carrera, anioGraduacion) {
+            super(nombre, carrera)
+            this.anioGraduacion = anioGraduacion
+        }
+        descripcion() {
+            console.log(`Hola, me llamo ${this.nombre} y me gradue de ${this.carrera}`)
+        }
+    }
+    const Stephen = new Graduado("Stephen Hawkings", "Fisica", 1998)
+    console.log(Stephen)
+    Stephen.descripcion()
+</script>
+
+</html>
