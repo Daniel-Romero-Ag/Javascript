@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log("Esto es un registro, sirve para marcar un resultado en el tiempo")
+    console.info("Esto es un poco de informacion sobre algo")
+    console.warn("Esto es un mensaje de advertencia")
+    console.error("Esto es un mensaje de error")
+    console.time("Cuanto tarda")
+    const millon = Array(10000000).fill("100")
+    console.timeEnd("Cuanto tarda")
+    console.clear()
+
+    const cien = Array(100).fill("")
+
+    cien.forEach((value, key) => {
+        console.count("Este codigo se ha repetido")
+        cien[key] = key
+    })
+    console.log(cien)
+    console.clear()
+    const daniel = {
+        nombre: "Daniel",
+        apellido: "Romero",
+        edad: 22,
+        sexo: "Masculino"
+    }
+    console.log(daniel)
+    console.table(daniel)
+    const colores = ["Azul", "Rojo", "Verde"]
+    console.table(colores)
+</script>
+
+</html>
