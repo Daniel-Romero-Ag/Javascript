@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    class Persona {
+        constructor(nombre, edad, genero) {
+            this.nombre = nombre
+            this.edad = edad
+            this.genero = genero
+        }
+        presentarse() {
+            console.log(`Hola, me llamo ${this.nombre} y tengo ${this.edad}`)
+        }
+        get getNombre() {
+            return this.nombre
+        }
+        set setNombre(nombre) {
+            this.nombre = nombre
+        }
+    }
+
+    const Daniel = new Persona("Daniel", 12, "Hombre")
+    Daniel.presentarse()
+
+    class EstudianteDePrimaria extends Persona {
+        constructor(nombre, edad, genero, grado, escuela) {
+            super(nombre, edad, genero)
+            this.grado = grado
+            this.escuela = escuela
+        }
+        static descripcion() {
+            console.log("Los estudiantes de primaria aprenden el conocimiento basico en matematicas, español y ciencias")
+        }
+        static describirRequisitosParaPasarCurso() {
+            console.log("Para pasar de curso los alumnos necesitan almenos un 50% de asistencia y aprobar todas las materias")
+        }
+
+
+    }
+
+    const Maria = new EstudianteDePrimaria("Maria", 9, "Mujer", 2, "Lazara Cardenas")
+    Maria.presentarse()
+    Maria.setNombre = "Jose"
+    console.log("Hola " + Maria.getNombre)
+    EstudianteDePrimaria.descripcion()
+    EstudianteDePrimaria.describirRequisitosParaPasarCurso()
+</script>
+
+</html>
